@@ -89,10 +89,14 @@ function CountdownTimer() {
     setHours(e.target.value);
   };
   return (
-    <div>
+    <div className='box'>
       {showEndScreen.show && (
         <h1 className="title  text-light">{showEndScreen.message}</h1>
       )}
+      {isRunning &&  (
+        <h1 className="title  text-light">Timer Is ON...</h1>
+      )
+     }
       <Timer
         milliseconds={milliseconds}
         seconds={seconds}
